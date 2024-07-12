@@ -50,7 +50,7 @@ nav ul li a:hover {
 
 /* Hero section */
 #hero {
-    background: url('https://images.unsplash.com/photo-1676030789424-7fec70ed4840?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1647350650908-c78791bf8efd?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -63,4 +63,19 @@ nav ul li a:hover {
 
 #hero p {
     font-size: 1.2em;
+}
+
+/* About section */
+#about {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+#about p {
+    margin-bottom: 15px;
 }
