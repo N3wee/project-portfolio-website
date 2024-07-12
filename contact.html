@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Your Name</title>
+    <title>Contact - Nathan Sweeney</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
@@ -16,8 +16,30 @@
             </ul>
         </nav>
     </header>
-   <main>
-   </main>
+    <main>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit-form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div id="social-media">
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                <a href="https://github.com/yourprofile">GitHub</a>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 Nathan Sweeney. All rights reserved.</p>
     </footer>
