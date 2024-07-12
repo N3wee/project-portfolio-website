@@ -47,3 +47,20 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+/* Hero section */
+#hero {
+    background: url('https://images.unsplash.com/photo-1676030789424-7fec70ed4840?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
