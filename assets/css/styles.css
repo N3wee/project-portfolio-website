@@ -11,6 +11,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Layout styles */
@@ -32,6 +35,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -44,8 +48,10 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 /* Hero section */
@@ -118,8 +124,10 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-#contact form button:hover {
+#contact form button:hover,
+#contact form button:focus {
     background-color: #555;
+    outline: none;
 }
 
 #social-media {
@@ -133,40 +141,45 @@ nav ul li a:hover {
     font-size: 1.2em;
 }
 
-#social-media a:hover {
+#social-media a:hover,
+#social-media a:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 /* Ensure the footer remains at the bottom and spans the full width */
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-    padding-bottom: 60px; /* Adjust the height as needed */
-}
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    margin-top: auto;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        width: 100%;
+    }
+}
 
 /* Image resizing */
 .small-image {
     width: 300px;
     height: auto;
 }
+
