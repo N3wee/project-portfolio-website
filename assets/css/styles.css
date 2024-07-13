@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 /* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'mulish', sans-serif;
 }
 
 /* Basic body styling */
@@ -59,6 +61,10 @@ nav ul li a:focus {
     outline: none;
 }
 
+#active-page {
+    text-decoration: underline;
+}
+
 /* Hero section */
 #hero {
     display: flex;
@@ -80,11 +86,11 @@ nav ul li a:focus {
 .hero-text {
     flex: 1;
     padding-right: 20px;
-    text-align: right;
+    text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 4em; /* Adjusted size */
+    font-size: 6em; /* Adjusted size */
     margin-bottom: 20px;
 }
 
@@ -100,7 +106,7 @@ nav ul li a:focus {
 }
 
 .hero-image img {
-    max-width: 50%; /* Reduced image size */
+    max-width: 70%; /* Reduced image size */
     height: auto;
     border-radius: 10px;
 }
@@ -108,12 +114,15 @@ nav ul li a:focus {
 /* About section */
 #about {
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.0);
     text-align: center;
+    color: #fff;
+    width: 50%;
 }
 
 #about h2 {
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 #about p {
@@ -171,7 +180,7 @@ nav ul li a:focus {
 
 #social-media a {
     margin: 0 10px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 1.2em;
 }
