@@ -137,14 +137,36 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Footer styling */
+/* Ensure the footer remains at the bottom and spans the full width */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 60px; /* Adjust the height as needed */
+}
+
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
+
+/* Image resizing */
+.small-image {
+    width: 300px;
+    height: auto;
+}
