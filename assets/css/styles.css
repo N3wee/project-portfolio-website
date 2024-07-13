@@ -26,7 +26,7 @@ header, main, footer {
 
 /* Header styling */
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.0); 
     color: #fff;
     padding: 10px 0;
 }
@@ -63,7 +63,7 @@ nav ul li a:focus {
     align-items: center;
     justify-content: center;
     padding: 50px 20px;
-    height: 100vh;
+    height: calc(100vh - 140px);
     color: #fff; /* Ensure text is visible over the background */
     text-align: center;
     background: none; /* Remove any background set on #hero */
@@ -187,7 +187,7 @@ nav ul li a:focus {
 
 /* Ensure the footer remains at the bottom and spans the full width */
 footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.0);
     color: #fff;
     text-align: center;
     padding: 10px 0;
