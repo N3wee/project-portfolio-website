@@ -62,8 +62,8 @@ nav ul li a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
-    height: calc(100vh - 140px);
+    padding: 20px; /* Reduced padding */
+    height: calc(100vh - 140px); /* Height adjusted to fit within viewport considering header and footer */
     color: #fff; /* Ensure text is visible over the background */
     text-align: center;
     background: none; /* Remove any background set on #hero */
@@ -99,7 +99,7 @@ nav ul li a:focus {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 10px;
 }
