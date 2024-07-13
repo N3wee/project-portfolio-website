@@ -19,7 +19,7 @@ body {
 /* Layout styles */
 header, main, footer {
     padding: 20px;
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
 }
 
@@ -28,6 +28,7 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    width: 100%;
 }
 
 /* Navigation menu */
