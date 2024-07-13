@@ -6,15 +6,17 @@
 }
 
 /* Basic body styling */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     background: url('../images/spc-img-2.avif') no-repeat center center/cover;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Layout styles */
@@ -22,13 +24,6 @@ header, main, footer {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
-}
-
-main {
-    flex: 1; /* Make the main content take up the remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the content vertically */
 }
 
 /* Header styling */
@@ -69,11 +64,10 @@ nav ul li a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Reduced padding */
-    height: calc(100vh - 140px); /* Height adjusted to fit within viewport considering header and footer */
-    color: #fff; /* Ensure text is visible over the background */
+    padding: 20px;
+    color: #fff;
     text-align: center;
-    background: none; /* Remove any background set on #hero */
+    background: none;
 }
 
 .hero-content {
@@ -90,12 +84,12 @@ nav ul li a:focus {
 }
 
 .hero-text h1 {
-    font-size: 5em; /* Make the "Nathan Sweeney" larger */
+    font-size: 4em; /* Adjusted size */
     margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 1.2em; /* Keep the description text size as is */
+    font-size: 1.2em;
 }
 
 .hero-image {
@@ -106,7 +100,7 @@ nav ul li a:focus {
 }
 
 .hero-image img {
-    max-width: 75%;
+    max-width: 50%; /* Reduced image size */
     height: auto;
     border-radius: 10px;
 }
@@ -199,7 +193,6 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    margin-top: auto; /* Ensure the footer stays at the bottom */
 }
 
 .footer-container {
@@ -220,7 +213,7 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        font-size: 1.2em; /* Adjusted font size for smaller screens */
+        font-size: 1.2em;
     }
 
     .hero-content {
@@ -251,6 +244,7 @@ footer {
     width: 300px;
     height: auto;
 }
+
 
 
 
