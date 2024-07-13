@@ -20,3 +20,8 @@ This is a portfolio website to showcase my skills, projects, and contact informa
 
 - **HTML5:** For structuring the content on the web pages.
 - **CSS3:** For styling the web pages and ensuring a responsive design.
+
+
+background images used from https://unsplash.com/
+
+Van Gogh style portrait generated with AI using a photo of myself, https://www.lightxeditor.com/
