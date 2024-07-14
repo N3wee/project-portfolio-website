@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* Reset some default browser styles */
+/* 
+* Reset some default browser styles 
+* Apply box-sizing and set default font-family for all elements
+*/
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +11,10 @@
     font-family: 'Mulish', sans-serif;
 }
 
-/* Basic body styling */
+/* 
+* Set basic body styling 
+* Ensure the body and html elements cover the full height of the viewport
+*/
 html, body {
     height: 100%;
     margin: 0;
@@ -16,126 +22,143 @@ html, body {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    background: url('../images/spc-img-2.avif') no-repeat center center/cover;
+    grid-template-rows: auto 1fr auto; /* Create a grid layout with auto-sized header and footer, main content takes the remaining space */
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.6; /* Improve readability with line height */
 }
 
-/* Layout styles */
+/* 
+* Layout styles for header, main, and footer 
+* Ensure these elements are centered and span the full width of the container
+*/
 header, main, footer {
     width: 100%;
     padding: 20px;
     margin: 0 auto;
 }
 
-/* Header styling */
+/* 
+* Header styling 
+* Make the background transparent and text color white
+*/
 header {
     background-color: rgba(0, 0, 0, 0.0); 
     color: #fff;
     padding: 10px 0;
 }
 
-/* Navigation menu */
+/* 
+* Navigation menu styles 
+* Center the navigation links and style them
+*/
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove default list styling */
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: center; /* Center the navigation links */
+    flex-wrap: wrap; /* Allow wrapping of items */
     font-size: 1.5em;
 }
 
 nav ul li {
-    margin: 0 40px;
+    margin: 0 40px; /* Space out the list items */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove default underline */
     font-weight: bold;
     font-size: 1.2em;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    text-decoration: underline;
-    outline: none;
+    text-decoration: underline; /* Underline text on hover or focus */
+    outline: none; /* Remove default outline */
 }
 
 #active-page {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline the active page link */
 }
 
-/* Hero section */
+/* 
+* Hero section styles 
+* Center the content and set appropriate padding and text alignment
+*/
 #hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the items */
     padding: 20px;
     color: #fff;
     text-align: center;
-    background: none;
+    background: none; /* Remove any background to let the background image show */
 }
 
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out the hero content */
     width: 100%;
 }
 
 .hero-text {
-    flex: 1;
+    flex: 1; /* Allow hero text to take equal space */
     padding-right: 20px;
     text-align: center;
 }
 
 .hero-text h1 {
-    font-size: 6em; /* Adjusted size */
-    margin-bottom: 20px;
+    font-size: 6em; /* Large heading */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
 .hero-text p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Paragraph font size */
 }
 
 .hero-image {
-    flex: 1;
+    flex: 1; /* Allow hero image to take equal space */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
 }
 
 .hero-image img {
-    max-width: 70%; /* Reduced image size */
-    height: auto;
-    border-radius: 10px;
+    max-width: 70%; /* Restrict the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
 }
 
-/* Social media links */
+/* 
+* Social media links styles 
+* Center the links and add some margin for spacing
+*/
 #social-media {
     margin-top: 20px;
-    text-align: center; /* Align social media links to the center */
+    text-align: center; /* Center the social media links */
 }
 
 #social-media a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
+    margin: 0 10px; /* Space between links */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
     font-size: 1.2em;
 }
 
 #social-media a:hover,
 #social-media a:focus {
-    text-decoration: underline;
-    outline: none;
+    text-decoration: underline; /* Underline on hover or focus */
+    outline: none; /* Remove default outline */
 }
 
 #social-media a i {
-    font-size: 2em; 
+    font-size: 2em; /* Larger icons */
 }
 
-/* Ensure the footer remains at the bottom and spans the full width */
+/* 
+* Footer styles 
+* Ensure the footer remains at the bottom and spans the full width
+*/
 footer {
     background-color: rgba(0, 0, 0, 0.0);
     color: #fff;
@@ -146,67 +169,79 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out footer content */
     align-items: flex-end;
     width: 100%;
     height: 100px;
 }
 
 .footer-container span {
-    flex: 1;
+    flex: 1; /* Ensure spans take equal space */
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 20px; /* Space at the bottom */
 }
 
-/* Responsive Design */
+/* 
+* Responsive Design 
+* Adjust the layout for smaller screens
+*/
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack navigation links vertically */
         font-size: 1.2em;
     }
 
     .hero-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack hero content vertically */
         text-align: center;
     }
 
     .hero-text {
-        padding-right: 0;
+        padding-right: 0; /* Remove right padding */
     }
 
     #hero h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Smaller heading */
     }
 
     #hero p {
-        font-size: 1em;
+        font-size: 1em; /* Smaller paragraph font size */
     }
 }
 
-/* Image resizing */
+/* 
+* Image resizing 
+* Ensure images are responsive
+*/
 .small-image {
     width: 300px;
     height: auto;
 }
 
-/* Toggle Background Functionality */
+/* 
+* Toggle Background Functionality 
+* Styles for the checkbox and background container
+*/
 .toggle-checkbox {
-    display: none;
+    display: none; /* Hide the checkbox */
 }
 
 .background-container {
-    position: fixed; /* Ensure it covers the full background */
+    position: fixed; /* Fix the container to cover the full background */
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: -1;
-    background-image: url('../images/spc-img-2.avif');
+    z-index: -1; /* Place it behind other elements */
+    background-image: url('../images/spc-img-2.avif'); /* Default background image */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/* 
+* Change background image when checkbox is checked 
+*/
 .toggle-checkbox:checked + .toggle-label + .background-container {
     background-image: url('../images/sunflowers-image.avif');
 }
@@ -218,15 +253,7 @@ footer {
     background-color: white;
     padding: 10px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1000; /* Ensure the label is above other elements */
     border: 1px solid black;
     border-radius: 5px;
 }
-
-
-
-
-
-
-
-
