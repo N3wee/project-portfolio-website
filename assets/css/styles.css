@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* Reset some default browser styles */
 * {
     margin: 0;
@@ -187,6 +188,41 @@ footer {
     width: 300px;
     height: auto;
 }
+
+/* Toggle Background Functionality */
+.toggle-checkbox {
+    display: none;
+}
+
+.background-container {
+    position: fixed; /* Ensure it covers the full background */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url('../images/spc-img-2.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.toggle-checkbox:checked + .toggle-label + .background-container {
+    background-image: url('../images/sunflowers-image.avif');
+}
+
+.toggle-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 
 
 
