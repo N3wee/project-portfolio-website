@@ -250,10 +250,41 @@ footer {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.0);
     padding: 10px;
     cursor: pointer;
     z-index: 1000; /* Ensure the label is above other elements */
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
+    display: flex; /* Use flexbox to center icons */
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-label  i {
+    color: white;
+}
+
+/* 
+* Hide the sun icon by default 
+* Show the moon icon by default 
+*/
+#sun-icon {
+    display: none; /* Hide the sun icon initially */
+}
+
+#moon-icon {
+    display: block; /* Show the moon icon initially */
+}
+
+/* 
+* When the checkbox is checked, 
+* hide the moon icon and show the sun icon 
+*/
+.toggle-checkbox:checked + .toggle-label #moon-icon {
+    display: none; /* Hide the moon icon when checked */
+}
+
+.toggle-checkbox:checked + .toggle-label #sun-icon {
+    display: block; /* Show the sun icon when checked */
 }
