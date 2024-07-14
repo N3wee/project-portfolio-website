@@ -108,12 +108,12 @@ nav ul li a:focus {
 }
 
 .hero-text h1 {
-    font-size: 6em; /* Large heading */
-    margin-bottom: 20px; /* Space below the heading */
+    font-size: 5em; /* Large heading */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
 .hero-text p {
-    font-size: 1.2em; /* Paragraph font size */
+    font-size: 1em; /* Paragraph font size */
 }
 
 .hero-image {
@@ -287,4 +287,10 @@ footer {
 
 .toggle-checkbox:checked + .toggle-label #sun-icon {
     display: block; /* Show the sun icon when checked */
+}
+
+/* Apply semi-transparent background to hero section when checkbox is checked */
+.toggle-checkbox:checked ~ main .hero-text {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+    border-radius: 10px; /* Rounded corners */
 }
