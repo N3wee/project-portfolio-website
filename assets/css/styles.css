@@ -42,9 +42,11 @@ header, main, footer {
 * Make the background transparent and text color white
 */
 header {
-    background-color: rgba(0, 0, 0, 0.0); 
+    background-color: black; 
     color: #fff;
     padding: 10px 0;
+    position: relative; /* Ensure header is positioned relative */
+    z-index: 1000; /* Ensure header is above other content */
 }
 
 /* 
@@ -66,13 +68,20 @@ nav ul li {
 nav ul li a {
     color: #fff; /* White text color */
     text-decoration: none; /* Remove default underline */
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px; /* Add some padding */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    text-decoration: underline; /* Underline text on hover or focus */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover or focus */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    text-decoration: none; /* Remove underline */
     outline: none; /* Remove default outline */
 }
 
@@ -110,6 +119,7 @@ nav ul li a:focus {
 .hero-text h1 {
     font-size: 5em; /* Large heading */
     margin-bottom: 15px; /* Space below the heading */
+    line-height: 1; /* Reduce line height for better spacing */
 }
 
 .hero-text p {
@@ -187,8 +197,26 @@ footer {
 */
 @media (max-width: 768px) {
     nav ul {
+        display: none; /* Hide the navigation list on small screens */
         flex-direction: column; /* Stack navigation links vertically */
-        font-size: 1.2em;
+        width: 100%;
+        text-align: center;
+        background-color: black; /* Same background as header */
+        position: absolute;
+        top: 50px; /* Position below the header */
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out the list items */
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-list {
+        display: flex; /* Display the nav list when checkbox is checked */
+    }
+
+    .nav-toggle-label {
+        display: block; /* Show the label on small screens */
     }
 
     .hero-content {
@@ -202,6 +230,8 @@ footer {
 
     #hero h1 {
         font-size: 2.5em; /* Smaller heading */
+        line-height: 1.2; /* Reduce line height for better spacing */
+        margin: 0; /* Remove any default margin */
     }
 
     #hero p {
@@ -249,7 +279,7 @@ footer {
 .toggle-label {
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 10px; /* Adjust to your preferred position */
     background-color: rgba(0, 0, 0, 0.0);
     padding: 10px;
     cursor: pointer;
@@ -261,7 +291,7 @@ footer {
     justify-content: center;
 }
 
-.toggle-label  i {
+.toggle-label i {
     color: white;
 }
 
@@ -290,8 +320,67 @@ footer {
 }
 
 /* Apply semi-transparent background to hero section when checkbox is checked */
-.toggle-checkbox:checked ~ main .hero-text {
+.toggle-checkbox:checked ~ .background-container ~ main .hero-text {
     background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
     border-radius: 10px; /* Rounded corners */
     padding: 40px 20px;
+}
+
+/* Navigation toggle for mobile devices */
+.nav-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.nav-toggle-label {
+    display: none; /* Hide the label initially */
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the navigation list on small screens */
+        flex-direction: column; /* Stack navigation links vertically */
+        width: 100%;
+        text-align: center;
+        background-color: black; /* Same background as header */
+        position: absolute;
+        top: 50px; /* Position below the header */
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out the list items */
+    }
+
+    .nav-toggle:checked + .nav-toggle-label + .nav-list {
+        display: flex; /* Display the nav list when checkbox is checked */
+    }
+
+    .nav-toggle-label {
+        display: block; /* Show the label on small screens */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack hero content vertically */
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0; /* Remove right padding */
+    }
+
+    #hero h1 {
+        font-size: 2.5em; /* Smaller heading */
+        line-height: 1.2; /* Reduce line height for better spacing */
+        margin: 0; /* Remove any default margin */
+    }
+
+    #hero p {
+        font-size: 1em; /* Smaller paragraph font size */
+    }
 }
