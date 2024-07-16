@@ -46,9 +46,11 @@ header {
     color: #fff;
     padding: 10px 0;
     position: relative; /* Ensure header is positioned relative */
+    justify-content: center;
     display: flex;
     align-items:center ;
     z-index: 1000; /* Ensure header is above other content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 /* 
@@ -125,9 +127,13 @@ nav ul li a:focus {
 }
 
 .hero-text h1 {
-    font-size: 5em; /* Large heading */
+    font-size: 4em; /* Large heading */
     margin-bottom: 15px; /* Space below the heading */
     line-height: 1; /* Reduce line height for better spacing */
+}
+
+.hero-text hr {
+    margin-bottom: 35px;
 }
 
 .hero-text p {
@@ -306,9 +312,9 @@ footer {
     nav ul {
         display: none; /* Hide the navigation list on small screens */
         flex-direction: column; /* Stack navigation links vertically */
-        width: 50%;
-        text-align: left;
-        background-color: rgba(0, 0, 0, 0.0); /* Same background as header */
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 1); /* Same background as header */
         position: absolute;
         top: 50px; /* Position below the header */
         left: 0;
@@ -360,9 +366,4 @@ footer {
         border-radius: 10px; /* Rounded corners */
         padding: 0px;
     }
-
-    .hero-image {
-        margin-left: 50px; /* Move the hero image 100px to the right on small screens */
-    }
-
 }
