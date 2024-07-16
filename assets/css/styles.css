@@ -153,6 +153,62 @@ nav ul li a:focus {
     border-radius: 10px; /* Rounded corners */
 }
 
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    color: #000; /* Text color */
+}
+
+form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    border: solid white 1px;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+    background-color: #004a99;
+    transform: scale(1.05);
+    outline: none; /* Remove default outline */
+}
+
+.hero-text form hr {
+    margin-bottom: 5px;
+}
+
+
+
 /* 
 * Social media links styles 
 * Center the links and add some margin for spacing
