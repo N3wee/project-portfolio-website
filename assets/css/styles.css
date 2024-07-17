@@ -355,6 +355,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* 
@@ -505,5 +506,9 @@ footer {
     .multi-image-container img {
         max-width: 80%;
         margin-bottom: 10px;
+    }
+    
+    .background-container {
+        background-attachment: scroll; /* Revert to default behavior for mobile to avoid performance issues */
     }
 }
