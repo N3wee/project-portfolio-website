@@ -5,12 +5,14 @@
 
 Welcome to Nathan Sweeney's portfolio website. This project showcases Nathan's journey from international trade to full stack development. It highlights his skills, projects, and professional accomplishments. The website aims to provide a comprehensive view of Nathan's expertise to potential employers, collaborators, and clients. It serves as a platform for present projects, demonstrate skills in web development, and offer a point of contact for professional inquiries.
 
+![Responsive Test](assets/images/responsive-test-image.png)
+
 ## Features
 
 - **Responsive Design**: Ensures a seamless experience across all devices, making the website accessible on desktops, tablets, and mobile phones.
 - **Light/Dark Mode Toggle**: Users can switch between light and dark modes for different viewing experience.
 - **Contact Form**: A functional contact form allows users to reach out directly for inquiries or collaboration opportunities.
-- **Portfolio Section**: Displays current and upcoming projects with detailed descriptions and images, showcasing work and skills.
+- **Portfolio Section**: Displays current and upcoming projects with detailed descriptions, images and links, showcasing work and skills.
 
 ## Testing
 
@@ -23,6 +25,7 @@ The website has been thoroughly tested to ensure that all features work as inten
 ### Interesting Bugs or Problems
 
 - During testing, a minor issue was discovered with the dark mode toggle not maintaining the selected mode on page reload. This will be addressed in a future update when incorporating JavaScript for better solution.
+- During deployment it was discovered the filepaths from my html files were incorrect and had to be fixed.
 
 ### Validator Testing
 
