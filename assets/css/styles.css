@@ -366,7 +366,7 @@ footer {
 
 .toggle-label {
     position: absolute;
-    top: 15px;
+    top: 12px;
     right: 10px; /* Adjust position */
     background-color: rgba(0, 0, 0, 0.0);
     padding: 10px;
@@ -457,7 +457,7 @@ footer {
     .nav-toggle:checked + .nav-toggle-label + .nav-list {
         display: flex; /* Display the nav list when checkbox is checked */
         flex-direction: column;
-        top: 60px;
+        top: 0;
     }
 
     .nav-toggle-label {
